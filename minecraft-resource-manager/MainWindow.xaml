@@ -1,0 +1,34 @@
+﻿<Window x:Class="minecraft_resource_manager.MainWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:local="clr-namespace:minecraft_resource_manager"
+	mc:Ignorable="d"
+	Title="Minecraft Resource Manager" Height="450" Width="611" ResizeMode="NoResize">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="80"/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="245"/>
+			<ColumnDefinition Width="567"/>
+		</Grid.ColumnDefinitions>
+
+		<Button Margin="10,10,125,40" Content="Load" Click="Load_Click"/>
+		<Button Name="Generate" Margin="125,10,10,40" Content="Generate" Click="Generate_Click" IsEnabled="False"/>
+		<TextBox Name="TextBox" Margin="10,45,10,5" TextChanged="TextBox_TextChanged" VerticalContentAlignment="Center"/>
+		<ListBox Name="Blockstates" Margin="10,0,10,10" Grid.Row="1" SelectionChanged="Blockstates_SelectionChanged"/>
+
+		<Button Name="Blockstate" Margin="0,10,457,40" Grid.Column="1" Content="Blockstate" Click="Blockstate_Click" IsEnabled="False"/>
+		<Button Name="BlockModel" Margin="115,10,342,40" Grid.Column="1" Content="Block Model" Click="BlockModel_Click" IsEnabled="False"/>
+		<Button Name="ItemModel" Margin="230,10,227,40" Grid.Column="1" Content="Item Model" Click="ItemModel_Click" IsEnabled="False"/>
+		<Button Name="Recipe" Margin="0,45,457,5" Grid.Column="1" Content="Recipe" Click="Recipe_Click" IsEnabled="False"/>
+		<Button Name="Advancement" Margin="115,45,342,5" Grid.Column="1" Content="Advancement" Click="Advancement_Click" IsEnabled="False"/>
+		<Button Name="LootTable" Margin="230,45,227,5" Grid.Column="1" Content="Loot Table" Click="LootTable_Click" IsEnabled="False"/>
+		<ListBox Name="BlockModels" Margin="0,0,342,10" Grid.Row="1" Grid.Column="1" SelectionChanged="BlockModels_SelectionChanged"/>
+
+		<TextBlock Grid.Column="1" Margin="230,0,227,10" Grid.Row="1" TextWrapping="Wrap">Written with love by VanillaChai@GitHub</TextBlock>
+	</Grid>
+</Window>

@@ -1,0 +1,10 @@
+{
+	"type": "minecraft:blasting",
+	"group": "group",
+	"ingredient": {
+		"item": "minecraft:bedrock"
+	},
+	"result": "$MOD:$ITEM",
+	"experience": 0.1,
+	"cookingtime": 100
+}

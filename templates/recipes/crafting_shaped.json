@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"group": "group",
+	"pattern": [
+		"iii",
+		"ttt",
+		"iii"
+	],
+	"key": {
+		"i": {
+			"item": "minecraft:bedrock"
+		},
+		"t": {
+			"tag": "minecraft:planks"
+		}
+	},
+	"result": {
+		"item": "$MOD:$ITEM",
+		"count": 1
+	}
+}

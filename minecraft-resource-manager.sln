@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minecraft-resource-manager", "minecraft-resource-manager\minecraft-resource-manager.csproj", "{D90E5FC4-9201-4B13-8865-3BA32D2E3BBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D90E5FC4-9201-4B13-8865-3BA32D2E3BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D90E5FC4-9201-4B13-8865-3BA32D2E3BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D90E5FC4-9201-4B13-8865-3BA32D2E3BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D90E5FC4-9201-4B13-8865-3BA32D2E3BBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {522A561B-9BA7-4E9C-A2A3-D6337052A130}
+	EndGlobalSection
+EndGlobal

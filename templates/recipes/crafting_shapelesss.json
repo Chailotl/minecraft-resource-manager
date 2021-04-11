@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "group",
+	"ingredients": [
+		{
+			"item": "minecraft:bedrock"
+		},
+		{
+			"tag": "minecraft:planks"
+		}
+	],
+	"result": {
+		"item": "$MOD:$ITEM",
+		"count": 1
+	}
+}

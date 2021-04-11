@@ -1,0 +1,8 @@
+{
+	"parent": "minecraft:block/orientable",
+	"textures": {
+		"top": "$MOD:block/$TEX_top",
+		"front": "$MOD:block/$TEX_front",
+		"side": "$MOD:block/$TEX"
+	}
+}

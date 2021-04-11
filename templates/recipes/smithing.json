@@ -1,0 +1,12 @@
+{
+	"type": "smithing:smithing",
+	"base": {
+		"item": "minecraft:bedrock"
+	},
+	"addition": {
+		"item": "minecraft:bedrock"
+	},
+	"result": {
+		"item": "$MOD:$ITEM"
+	}
+}

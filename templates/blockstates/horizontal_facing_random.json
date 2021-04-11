@@ -1,0 +1,21 @@
+{
+	"variants": {
+		"": [
+			{
+				"model": "$MOD:block/$BLOCK"
+			},
+			{
+				"model": "$MOD:block/$BLOCK",
+				"y": 90
+			},
+			{
+				"model": "$MOD:block/$BLOCK",
+				"y": 180
+			},
+			{
+				"model": "$MOD:block/$BLOCK",
+				"y": 270
+			}
+		]
+	}
+}

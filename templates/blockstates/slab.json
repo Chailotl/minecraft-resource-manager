@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "$MOD:block/$BLOCK"
+		},
+		"type=double": {
+			"model": "$MOD:block/$BLOCK_double"
+		},
+		"type=top": {
+			"model": "$MOD:block/$BLOCK_top"
+		}
+	}
+}

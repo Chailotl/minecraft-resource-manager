@@ -1,0 +1,108 @@
+﻿<Window x:Class="minecraft_resource_manager.GenerateWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:local="clr-namespace:minecraft_resource_manager"
+	mc:Ignorable="d"
+	Title="Generate Resource" Height="264" Width="491">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="419"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="792"/>
+		</Grid.ColumnDefinitions>
+		<TextBox Name="ModName" Margin="10,10,557,379" VerticalContentAlignment="Center" ToolTip="The name of your mod i.e. minecraft"/>
+		<TextBox Name="BlockName" Margin="10,46,557,343" VerticalContentAlignment="Center" ToolTip="The name of your block i.e. redstone_wire"/>
+		<TextBox Name="ItemName" Margin="10,80,557,309" VerticalContentAlignment="Center" ToolTip="The name of your block's item i.e. redstone"/>
+		<TextBox Name="ItemAltName" Margin="10,116,557,273" VerticalContentAlignment="Center" ToolTip="Used by loot tables with silktouch i.e. coal from coal ore, cobblestone from stone"/>
+		<TextBox Name="TextureName" Margin="10,150,557,239" VerticalContentAlignment="Center" ToolTip="The name of your texture"/>
+
+		<ComboBox Name="Blockstates" Margin="240,10,327,379" SelectedIndex="0" VerticalContentAlignment="Center">
+			<ComboBoxItem Content="No Blockstate" HorizontalAlignment="Left" Width="223"/>
+		</ComboBox>
+		<ComboBox Name="BlockModels" Margin="240,45,327,344" SelectedIndex="0" VerticalContentAlignment="Center">
+			<ComboBoxItem Content="No Block Model" HorizontalAlignment="Left" Width="223"/>
+		</ComboBox>
+		<ComboBox Name="ItemModels" Margin="240,80,327,309" SelectedIndex="0" VerticalContentAlignment="Center">
+			<ComboBoxItem Content="No Item Model" HorizontalAlignment="Left" Width="223"/>
+		</ComboBox>
+		<ComboBox Name="Recipes" Margin="240,115,327,274" SelectedIndex="0" VerticalContentAlignment="Center">
+			<ComboBoxItem Content="No Recipe" HorizontalAlignment="Left" Width="223"/>
+		</ComboBox>
+		<ComboBox Name="Advancements" Margin="240,150,327,239" SelectedIndex="0" VerticalContentAlignment="Center">
+			<ComboBoxItem Content="No Advancement" HorizontalAlignment="Left" Width="223"/>
+		</ComboBox>
+		<ComboBox Name="LootTables" Margin="240,185,327,204" SelectedIndex="0" VerticalContentAlignment="Center">
+			<ComboBoxItem Content="No Loot Table" HorizontalAlignment="Left" Width="223"/>
+		</ComboBox>
+
+		<Button Margin="10,185,557,204" Content="Generate" Click="Button_Click"></Button>
+
+		<TextBlock Text="Mod" IsHitTestVisible="False" Margin="10,15,557,383" Foreground="DarkGray" VerticalAlignment="Center" Padding="3">
+			<TextBlock.Style>
+				<Style TargetType="{x:Type TextBlock}">
+					<Setter Property="Visibility" Value="Collapsed"/>
+					<Style.Triggers>
+						<DataTrigger Binding="{Binding Text, ElementName=ModName}" Value="">
+							<Setter Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+					</Style.Triggers>
+				</Style>
+			</TextBlock.Style>
+		</TextBlock>
+
+		<TextBlock Text="Block" IsHitTestVisible="False" Margin="10,50,557,348" Foreground="DarkGray" VerticalAlignment="Center" Padding="3">
+			<TextBlock.Style>
+				<Style TargetType="{x:Type TextBlock}">
+					<Setter Property="Visibility" Value="Collapsed"/>
+					<Style.Triggers>
+						<DataTrigger Binding="{Binding Text, ElementName=BlockName}" Value="">
+							<Setter Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+					</Style.Triggers>
+				</Style>
+			</TextBlock.Style>
+		</TextBlock>
+
+		<TextBlock Text="Item" IsHitTestVisible="False" Margin="10,85,557,313" Foreground="DarkGray" VerticalAlignment="Center" Padding="3">
+			<TextBlock.Style>
+				<Style TargetType="{x:Type TextBlock}">
+					<Setter Property="Visibility" Value="Collapsed"/>
+					<Style.Triggers>
+						<DataTrigger Binding="{Binding Text, ElementName=ItemName}" Value="">
+							<Setter Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+					</Style.Triggers>
+				</Style>
+			</TextBlock.Style>
+		</TextBlock>
+
+		<TextBlock Text="Alternate Item" IsHitTestVisible="False" Margin="10,120,557,278" Foreground="DarkGray" VerticalAlignment="Center" Padding="3">
+			<TextBlock.Style>
+				<Style TargetType="{x:Type TextBlock}">
+					<Setter Property="Visibility" Value="Collapsed"/>
+					<Style.Triggers>
+						<DataTrigger Binding="{Binding Text, ElementName=ItemAltName}" Value="">
+							<Setter Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+					</Style.Triggers>
+				</Style>
+			</TextBlock.Style>
+		</TextBlock>
+
+		<TextBlock Text="Texture" IsHitTestVisible="False" Margin="10,155,557,243" Foreground="DarkGray" VerticalAlignment="Center" Padding="3">
+			<TextBlock.Style>
+				<Style TargetType="{x:Type TextBlock}">
+					<Setter Property="Visibility" Value="Collapsed"/>
+					<Style.Triggers>
+						<DataTrigger Binding="{Binding Text, ElementName=TextureName}" Value="">
+							<Setter Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+					</Style.Triggers>
+				</Style>
+			</TextBlock.Style>
+		</TextBlock>
+	</Grid>
+</Window>
