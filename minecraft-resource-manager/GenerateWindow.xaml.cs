@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Diagnostics;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -11,7 +12,7 @@ namespace minecraft_resource_manager
 	{
 		private MainWindow window;
 		private string resourceFolder;
-		private string templateFolder = @"D:\Documents\GitHub\minecraft-resource-manager\templates\";
+		private string templateFolder;
 
 		public GenerateWindow(MainWindow window, string resourceFolder)
 		{
@@ -19,6 +20,7 @@ namespace minecraft_resource_manager
 
 			this.window = window;
 			this.resourceFolder = resourceFolder;
+			templateFolder = Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName) + "\\templates\\";
 
 			addEntries(Blockstates, "blockstates");
 			addEntries(BlockModels, "block models");
