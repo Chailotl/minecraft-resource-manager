@@ -37,6 +37,14 @@ namespace minecraft_resource_manager
 			view.Filter = CustomerFilter;
 		}
 
+		private void MainWindow_Closing(object sender, CancelEventArgs e)
+		{
+			if (generateWindow != null)
+			{
+				generateWindow.Close();
+			}
+		}
+
 		private void Load_Click(object sender, RoutedEventArgs e)
 		{
 			CommonOpenFileDialog dialog = new CommonOpenFileDialog { IsFolderPicker = true };
@@ -90,6 +98,7 @@ namespace minecraft_resource_manager
 			if (generateWindow == null)
 			{
 				generateWindow = new GenerateWindow(this, resourceFolder);
+				generateWindow.Closed += (sndr, args) => this.generateWindow = null;
 				generateWindow.Show();
 			}
 		}
