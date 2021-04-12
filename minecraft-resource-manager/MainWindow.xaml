@@ -5,6 +5,7 @@
 	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 	xmlns:local="clr-namespace:minecraft_resource_manager"
 	mc:Ignorable="d"
+	Closing="MainWindow_Closing"
 	Title="Minecraft Resource Manager" Height="450" Width="611" ResizeMode="NoResize">
 	<Grid>
 		<Grid.RowDefinitions>

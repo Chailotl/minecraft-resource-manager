@@ -1,5 +1,6 @@
 ﻿using Microsoft.WindowsAPICodePack.Dialogs;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -17,6 +18,8 @@ namespace minecraft_resource_manager
 		private string resourceFolder;
 		private string selectedMod;
 		private string selectedBlock;
+
+		private Window generateWindow;
 
 		private List<string> blockstates = new List<string>();
 
@@ -84,8 +87,11 @@ namespace minecraft_resource_manager
 
 		private void Generate_Click(object sender, RoutedEventArgs e)
 		{
-			GenerateWindow window = new GenerateWindow(this, resourceFolder);
-			window.Show();
+			if (generateWindow == null)
+			{
+				generateWindow = new GenerateWindow(this, resourceFolder);
+				generateWindow.Show();
+			}
 		}
 
 		private void TextBox_TextChanged(object sender, TextChangedEventArgs e) => CollectionViewSource.GetDefaultView(Blockstates.ItemsSource).Refresh();
