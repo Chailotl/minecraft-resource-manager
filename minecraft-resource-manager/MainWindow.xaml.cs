@@ -171,8 +171,15 @@ namespace minecraft_resource_manager
 
 			string id = item.ToString();
 			int i = id.IndexOf(':');
-			string mod = id.Remove(i);
-			string block = id.Substring(i + 1);
+			string mod, block;
+			if (i == -1)
+			{
+				mod = "minecraft";
+				block = id;
+			} else {
+				mod = id.Remove(i);
+				block = id.Substring(i + 1);
+			}
 
 			openFile($@"{resourceFolder}\assets\{mod}\models\{block}.json");
 		}
